@@ -1,0 +1,226 @@
+body {
+    font-family: "Jaturat"; /* Définit la police de caractères du corps du site à 'Jaturat' */
+    background-image: url('ee.png'); /* Définit une image de fond (ee.png) */
+    background-size: cover; /* L'image de fond est redimensionnée pour couvrir toute la fenêtre */
+    background-position: center; /* Positionne l'image de fond au centre de l'écran */
+    color: white; /* Définit la couleur du texte en blanc */
+    margin: 0; /* Supprime les marges par défaut autour du body */
+    padding: 0; /* Supprime les espacements internes par défaut du body */
+}
+
+nav {
+    text-align: center; /* Centre le contenu du menu de navigation */
+    margin-top: 20px; /* Ajoute un espace de 20px en haut du menu */
+}
+
+nav ul {
+    list-style: none; /* Supprime les puces des éléments de liste */
+    padding: 0; /* Supprime le padding par défaut des listes */
+    margin: 0; /* Supprime la marge par défaut des listes */
+    display: flex; /* Utilise une disposition en flexbox pour les éléments de la liste */
+    justify-content: space-between; /* Distribue l'espace entre les éléments de la liste de manière uniforme */
+    max-width: 1000px; /* Limite la largeur du menu à 1000px */
+    margin: auto; /* Centre le menu horizontalement */
+    gap: 10px; /* Ajoute un écart de 10px entre les éléments de la liste */
+}
+
+nav li {
+    position: relative; /* Permet un positionnement relatif pour les éléments de menu (utile pour les sous-menus) */
+}
+
+.menu-title {
+    background-color: #7cf4e7; /* Définit la couleur de fond du titre du menu */
+    color: #f8f8f8; /* Définit la couleur du texte à blanc clair */
+    padding: 10px 20px; /* Ajoute un padding de 10px en haut et en bas, 20px à gauche et à droite */
+    border: none; /* Supprime les bordures autour du titre */
+    text-align: center; /* Centre le texte à l'intérieur du titre du menu */
+    width: 150px; /* Définit une largeur fixe de 150px pour chaque élément de menu */
+    cursor: pointer; /* Change le curseur de la souris pour indiquer que l'élément est cliquable */
+    display: block; /* Affiche l'élément comme un bloc */
+    border-radius: 10px; /* Applique des coins arrondis de 10px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre légère sous l'élément */
+    transition: all 0.3s ease; /* Applique une transition douce sur tous les changements de style en 0.3s */
+    background: linear-gradient(45deg, #7cf4e7, #5eafc2); /* Crée un dégradé linéaire pour le fond de l'élément */
+}
+
+.menu-title:hover {
+    background-color: #000000; /* Change la couleur de fond à noir lors du survol */
+    color: #fff; /* Change la couleur du texte en blanc lors du survol */
+    transform: translateY(-5px); /* Déplace l'élément légèrement vers le haut lors du survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Augmente l'intensité de l'ombre sous l'élément */
+}
+
+.submenu {
+    display: none; /* Cache le sous-menu par défaut */
+    padding: 10px 0; /* Ajoute du padding au sous-menu */
+    position: absolute; /* Positionne le sous-menu de manière absolue */
+    left: 0; /* Place le sous-menu à gauche de son parent */
+    width: 150px; /* Définit la largeur du sous-menu */
+    top: 100%; /* Place le sous-menu juste en dessous de l'élément parent */
+    z-index: 1000; /* S'assure que le sous-menu soit au-dessus des autres éléments */
+    max-height: 200px; /* Définit une hauteur maximale de 200px pour le sous-menu */
+    overflow: auto; /* Permet à un contenu trop long de défiler dans le sous-menu */
+    background: rgba(0, 0, 0, 0.8); /* Applique un fond semi-transparent noir */
+    border-radius: 10px; /* Applique des coins arrondis au sous-menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajoute une ombre douce autour du sous-menu */
+}
+
+.submenu li {
+    padding: 8px 20px; /* Ajoute un padding de 8px en haut et en bas, 20px à gauche et à droite pour chaque élément de sous-menu */
+    color: #fff; /* Définit la couleur du texte dans le sous-menu en blanc */
+}
+
+.menu-item input[type="checkbox"]:checked + .menu-title + .submenu {
+    display: block; /* Affiche le sous-menu lorsque la case à cocher est cochée */
+}
+
+.signature {
+    font-size: 30px; /* Définit la taille de la police à 30px */
+    color: #7cf4e7; /* Définit la couleur du texte à une teinte de bleu */
+    position: absolute; /* Positionne l'élément de manière absolue */
+    bottom: 10px; /* Place l'élément à 10px du bas */
+    right: 20px; /* Place l'élément à 20px de la droite */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Applique une ombre légère au texte */
+}
+
+.logo {
+    position: absolute; /* Positionne l'élément de manière absolue */
+    top: 10px; /* Place l'élément à 10px du haut */
+    left: 50%; /* Centre l'élément horizontalement */
+    transform: translateX(-50%); /* Ajuste la position de l'élément pour un centrage parfait */
+    color: #7cf4e7; /* Définit la couleur du texte de logo à une teinte de bleu */
+    font-size: 20px; /* Définit la taille du texte à 20px */
+    display: flex; /* Utilise une disposition flexbox pour l'alignement du logo */
+    align-items: center; /* Centre verticalement les éléments dans le logo */
+    gap: 8px; /* Ajoute un espace de 8px entre les éléments du logo */
+}
+
+.logo img {
+    width: 50px; /* Définit la largeur de l'image à 50px */
+    height: 50px; /* Définit la hauteur de l'image à 50px */
+    border-radius: 50%; /* Applique une forme circulaire à l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajoute une ombre douce autour de l'image */
+}
+
+.title {
+    position: absolute; /* Positionne l'élément de manière absolue */
+    top: 50px; /* Place l'élément à 50px du haut */
+    left: 50%; /* Centre l'élément horizontalement */
+    transform: translateX(-50%); /* Ajuste la position pour un centrage parfait */
+    font-size: 40px; /* Définit la taille de la police à 40px */
+    color: #7cf4e7; /* Définit la couleur du texte à une teinte de bleu */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    padding: 10px; /* Ajoute un padding de 10px autour du texte */
+}
+
+.container {
+    text-align: center; /* Centre le texte à l'intérieur du container */
+    max-width: 200px; /* Limite la largeur du container à 200px */
+    padding: 20px; /* Ajoute un padding de 20px à l'intérieur du container */
+    border-radius: 10px; /* Applique des coins arrondis au container */
+}
+
+section ul, section ol, section dl {
+    margin: 20px auto; /* Centre les listes (ul, ol, dl) avec une marge de 20px */
+    padding: 0; /* Supprime les espacements internes */
+    max-width: 600px; /* Limite la largeur maximale des listes à 600px */
+    color: #fff; /* Définit la couleur du texte à blanc */
+}
+
+section ul li, section ol li, section dl dt, section dl dd {
+    padding: 5px; /* Ajoute un padding de 5px autour des éléments de la liste */
+    font-size: 16px; /* Définit la taille de la police à 16px */
+}
+
+dl dt {
+    font-weight: bold; /* Met en gras les termes des définitions */
+}
+
+dl dd {
+    margin-left: 20px; /* Ajoute un décalage de 20px à gauche pour les définitions */
+}
+
+table {
+    width: 80%; /* Définit la largeur de la table à 80% de la largeur disponible */
+    margin: 20px auto; /* Centre la table horizontalement avec une marge de 20px */
+    border-collapse: collapse; /* Supprime l'espace entre les bordures des cellules */
+    color: #7cf4e7; /* Définit la couleur du texte de la table à une teinte de bleu */
+    background: rgba(0, 0, 0, 0.6); /* Définit un fond semi-transparent noir pour la table */
+    border-radius: 10px; /* Applique des coins arrondis à la table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajoute une ombre douce autour de la table */
+}
+
+table th, table td {
+    border: 1px solid #7cf4e7; /* Définit une bordure fine autour des cellules avec la couleur bleue */
+    padding: 10px; /* Ajoute du padding de 10px à l'intérieur des cellules */
+    text-align: left; /* Aligne le texte des cellules à gauche */
+    border-radius: 5px; /* Applique des coins arrondis aux cellules */
+}
+
+table th {
+    background-color: #333; /* Définit une couleur de fond sombre pour les en-têtes de table */
+    color: #7cf4e7; /* Définit la couleur du texte des en-têtes à une teinte de bleu */
+}
+
+form {
+    display: flex; /* Utilise une disposition flexbox pour le formulaire */
+    flex-direction: column; /* Organise les éléments du formulaire en colonne */
+    gap: 10px; /* Ajoute un espace de 10px entre les éléments */
+    max-width: 600px; /* Limite la largeur du formulaire à 600px */
+    margin: 20px auto; /* Centre le formulaire horizontalement avec une marge de 20px */
+    padding: 20px; /* Ajoute un padding de 20px à l'intérieur du formulaire */
+    background-color: rgba(0, 0, 0, 0.6); /* Applique un fond semi-transparent noir */
+    border-radius: 10px; /* Applique des coins arrondis au formulaire */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajoute une ombre douce autour du formulaire */
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    padding: 10px; /* Ajoute du padding de 10px à l'intérieur des champs de texte et de l'area */
+    border: none; /* Supprime les bordures par défaut */
+    border-radius: 5px; /* Applique des coins arrondis aux champs de saisie */
+    font-size: 16px; /* Définit la taille de la police à 16px */
+    transition: all 0.3s ease; /* Applique une transition douce pour tous les changements de style */
+}
+
+form input[type="text"]:focus, form input[type="email"]:focus, form textarea:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre lors du focus sur les champs */
+    outline: none; /* Supprime le contour par défaut lors du focus */
+}
+
+form button {
+    padding: 10px; /* Ajoute un padding de 10px au bouton */
+    background-color: #7cf4e7; /* Définit la couleur de fond du bouton à une teinte de bleu */
+    border: none; /* Supprime les bordures autour du bouton */
+    color: #fff; /* Définit la couleur du texte à blanc */
+    font-size: 16px; /* Définit la taille de la police à 16px */
+    cursor: pointer; /* Change le curseur pour indiquer que le bouton est cliquable */
+    border-radius: 5px; /* Applique des coins arrondis au bouton */
+    transition: background-color 0.3s ease; /* Applique une transition douce pour le changement de couleur de fond */
+}
+
+form button:hover {
+    background-color: #555; /* Change la couleur de fond du bouton au survol */
+}
+
+video {
+    display: block; /* Affiche la vidéo comme un bloc */
+    width: 80%; /* Définit la largeur de la vidéo à 80% de l'espace disponible */
+    margin: 20px auto; /* Centre la vidéo horizontalement avec une marge de 20px */
+    border-radius: 10px; /* Applique des coins arrondis à la vidéo */
+}
+
+footer {
+    text-align: center; /* Centre le texte du pied de page */
+    padding: 20px; /* Ajoute un padding de 20px autour du pied de page */
+    color: #7cf4e7; /* Définit la couleur du texte à une teinte de bleu */
+}
+.mySlides img {
+    width: 60%; /* Cela permettra à toutes les images dans les diapositives d'avoir la même largeur */
+    height: auto; /* Cela conserve les proportions de l'image */
+}
+
+/* Si tu veux redimensionner spécifiquement l'image 3 */
+.mySlides .img3 {
+    width: 30%;  /* Ajuste la largeur de l'image */
+    height: auto; /* Maintient les proportions de l'image */
+}
