@@ -5,17 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Bootstrap</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style_bootstrap.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .btn-custom {
+            padding: 5px 10px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            margin: 0;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .label-custom {
+            font-size: 14px;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="text-center">
-                    <img src="votre_photo.jpg" alt="Photo" class="img-thumbnail">
-                    <h3>Charvet Nikola</h3>
+            <div class="col-md-4 text-center">
+                <h3>Charvet Nikola</h3>
+                <img src="votre_photo.jpg" alt="Photo" class="img-thumbnail profile-photo">
                 </div>
                 <ul class="list-unstyled">
                     <hr></hr>
@@ -36,47 +56,68 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <h4 class="text-primary"><strong>📚 Formation</strong></h4>
+                <button class="btn btn-primary btn-block btn-custom">
+                    <h4 class="text-white"><strong>👤 Profil</strong></h4>
+                </button>
+                <p>Étudiant en BTS Cybersécurité Informatique et Réseau Électronique option informatique et reseaux (CIEL IR) au lycée François 1er, je suis actuellement en alternance en tant qu'apprenti technicien reseau .</p>
+
+                <button class="btn btn-primary btn-block btn-custom">
+                    <h4 class="text-white"><strong>📚 Formation</strong></h4>
+                </button>
                 <ul>
-                    <li>2024 - Baccalauréat Technologique (STI2D) - Lycée Blaise Pascal, Saint-Dizier</li>
-                    <li>2024-2026 - BTS CIEL IR - Lycée François 1er, Vitry-le-françois</li>
+                    <li><strong>2022 - 2024 :</strong> Baccalauréat Technologique (STI2D) - Lycée Blaise Pascal, Saint-Dizier <br>
+                        Specialite: Systeme d'Information et numerique (SIN)</li>
+                    <li><strong>2021 - 2022 :</strong> Diplome National du Brevet - College Luis Ortiz, Saint-Dizier</li>
                 </ul>
-                <h4 class="text-primary"><strong>💼 Expériences professionnelles</strong></h4>
+
+                <button class="btn btn-primary btn-block btn-custom">
+                    <h4 class="text-white"><strong>💼 Expériences professionnelles</strong></h4>
+                </button>
+                <p><strong>Société Alphanetinfo</strong> (Septembre - Août 2026) - Saint-Dizier</p>
+                <ul>
+
+                <button class="btn btn-primary btn-block btn-custom">
+                    <h4 class="text-white"><strong>🛠️ Competences</strong></h4>
+                </button>
                 <div>
-                    <p><strong>Alternance</strong></p>
-                    <p class="text-muted">Septembre - Aout 2026 - Société ALPHANETINFO - Saint-Dizier</p>
-                    <ul>
-                        <li>Apprenti technicien réseaux</li>
-                    </ul>
+                    <span class="label label-success label-custom">Python</span>
+                    <span class="label label-success label-custom">HTML/CSS</span>
+                    <span class="label label-success label-custom">C++</span>
                 </div>
-                <h4 class="text-primary"><strong>🛠️ Compétences</strong></h4>
-                <p>
-                    <span class="label label-success">JAVA</span>
-                    <span class="label label-success">HTML/CSS</span>
-                    <span class="label label-success">C#</span>
-                    <span class="label label-success">C++</span>
-                </p>
-                <h4 class="text-primary"><strong>🌍 Linguistiques</strong></h4>
+                <p><strong>Qualités personnelles :</strong> Dynamique, gestion du temps, communication efficace</p>
+
+                <button class="btn btn-primary btn-block btn-custom">
+                    <h4 class="text-white"><strong>📜 Certifications</strong></h4>
+                </button>
+                <ul>
+                    <li>PIX</li>
+                    <li>PRGPD - 2024</li>
+                </ul>
+
+                <button class="btn btn-primary btn-block btn-custom">
+                    <h4 class="text-white"><strong>🎯 Centres d'interet</strong></h4>
+                </button>
+                <div>
+                    <span class="label label-warning label-custom">Football,</span>
+                    <span class="label label-warning label-custom">Jeux video</span>
+                </div>
+
+                <button class="btn btn-primary btn-block btn-custom">
+                    <h4 class="text-white"><strong>🌍 Competences linguistiques</strong></h4>
+                </button>
+                <p>Français - Langue maternelle</p>
                 <p>Anglais</p>
-                <div class="progress mb-2">
-                    <div class="progress-bar progress-bar-success" style="width: 80%;">70%</div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-warning" style="width: 80%;">80%</div>
                 </div>
                 <p>Italien</p>
-                <div class="progress mb-2">
-                    <div class="progress-bar progress-bar-danger" style="width: 30%;">30%</div>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" style="width: 10%;">10%</div>
                 </div>
-                <h4 class="text-primary"><strong>🎯 Centres d'intérêt</strong></h4>
-                <span class="label label-warning">Football</span>
-                <span class="label label-warning">Jeux vidéo</span>
-
-                
-                <h4 class="text-primary"><strong>📜 Certifications</strong></h4>
-                <ul>
-                    <li>RGPD - 2024</li>
-                </ul>
             </div>
         </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
