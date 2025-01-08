@@ -111,7 +111,7 @@
         /* Styles pour écrans plus petits (mobile) */
         @media only screen and (max-width: 800px) {
     /* Définition d'une police personnalisée via @font-face */
-    @font-face {
+        @font-face {
         font-family: "Jaturat";
         src: url("https://db.onlinewebfonts.com/t/cf3fb387331afda8f5d7f9c8dea3cd13.eot");
         src: url("https://db.onlinewebfonts.com/t/cf3fb387331afda8f5d7f9c8dea3cd13.eot?#iefix") format("embedded-opentype"),
@@ -121,91 +121,70 @@
              url("https://db.onlinewebfonts.com/t/cf3fb387331afda8f5d7f9c8dea3cd13.svg#Jaturat") format("svg");
     }
 
-    /* Style du corps de la page */
     body {
         margin: 0;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-image: url('ee.png'); 
-        background-size: cover; 
-        background-position: center; 
+        background-image: url('ee.png');
+        background-size: cover;
+        background-position: center;
         color: #ffffff;
         font-family: "Jaturat";
-        position: relative;
     }
 
-    /* Conteneur pour le contenu principal */
     .container {
         text-align: center;
         max-width: 600px;
         padding: 20px;
-        border-radius: 10px;
     }
 
-    /* Style du logo */
     .logo {
         position: absolute;
         top: 10px;
         left: 50%;
         transform: translateX(-50%);
         color: #7cf4e7;
-        font-size: 20px;
+        font-size: 16px;
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
     .logo img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        transition: transform 0.3s ease;
     }
 
-    .logo img:hover {
-        transform: scale(1.2);
-    }
-
-    /* Style du titre */
     .title {
-        font-size: 2.5em;
+        font-size: 2rem;
         color: #7cf4e7;
         text-transform: uppercase;
         padding: 10px;
-        margin: 20px;
+        margin: 10px 0;
     }
 
-    /* Style des boutons */
     .button {
         display: inline-block;
-        padding: 10px 20px;
+        padding: 10px 15px;
         background-color: #fa0101;
         color: #ffffff;
         text-decoration: none;
-        margin-top: 20px;
-        font-size: 1em;
+        font-size: 0.9em;
         border-radius: 5px;
     }
 
-    /* Style des images dans les coins */
-    .top-left-image, .top-right-image {
+    .top-left-image,
+    .top-right-image {
         position: absolute;
-        width: 300px;
+        width: 150px;
         height: auto;
-        border-radius: 15px;
+        border-radius: 10px;
     }
 
-    .signature {
-        font-size: 1.2em;
-        color: #7cf4e7;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    /* Style des images */
     .top-left-image {
         top: 10px;
         left: 10px;
@@ -216,50 +195,39 @@
         right: 10px;
     }
 
-    /* Style pour écrans larges */
-    @media screen and (max-width: 800px) {
-        body {
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 10px;
-            height: auto;
+    .signature {
+        font-size: 0.9em;
+        color: #7cf4e7;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Styles spécifiques pour les mobiles */
+    @media only screen and (max-width: 800px) {
+        .logo img {
+            width: 30px;
+            height: 30px;
         }
 
-        .logo {
-            top: 20px;
-            left: 20px;
-            transform: translateX(0);
+        .title {
+            font-size: 1.5rem;
+        }
+
+        .button {
+            font-size: 0.8em;
+            padding: 8px 12px;
         }
 
         .top-left-image,
         .top-right-image {
-            width: 150px;
-            height: auto;
-        }
-
-        .container {
-            max-width: 100%;
-            padding: 10px;
-            margin: 0;
-        }
-
-        .title {
-            font-size: 2em;
-        }
-
-        .button {
-            font-size: 0.9em;
-            padding: 8px 16px;
+            width: 120px;
         }
 
         .signature {
-            font-size: 1em;
-            position: static;
-            text-align: center;
-            margin-top: 10px;
+            font-size: 0.8em;
         }
-        }
+    }
+
     }
     </style>
 </head>
